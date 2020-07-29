@@ -1,0 +1,96 @@
+<br><div class="container"> 
+  <div class='card'>
+      <div class='card-header'style="background-color: teal;">
+       
+    <marquee behavior="scroll" direction="left"> <h1 style="color:wheat;" ><i>FOOD CROPS</i></h1></marquee> 
+         
+      </div>
+    <div class='card-body'>
+        <div class="table-responsive">
+
+            <table class='table'>
+                <thead>
+                    <tr>
+                       
+                        <th>Portrayal</th>
+                        <th>Crop</th>
+                        <th>Sowing Season</th>
+                        <th>Harvesting Season</th>
+                        <th>Cultivation Practice</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let foodcrop of foodcrops">
+                        <td> <img [src]='foodcrop.Portrayal'  [style.width.px]='imageWidth' 
+                            [style.margin.px]='imageMargin'>
+                        </td>
+                        <td>{{foodcrop.Crop}}</td>
+                        <td>{{foodcrop.SowingSeason}}</td>
+                        <td>{{foodcrop.HarvestingSeason}}</td>
+                        <td style="text-align:justify;" >{{foodcrop.CultivationPractice}}</td>
+                        <!-- <td>{{foodcrop.Normallyaffecteddisease}}</td> -->
+                       
+                        <td>
+                            <button class="btn btn-success" [routerLink]="['/updatecrops',foodcrop._id]">Edit</button><br><br>
+                            <Button class="btn btn-danger" (click)="deleteProduct(foodcrop._id)">Delete</Button>
+                        </td>
+                        
+                    </tr>
+                    <tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+<!--  footer -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify"> The <i>AgriArchive</i> aims in digitizing the agricultural sector, for enabling the next generation with the innovative farming techniques and solution for the challenges faced by them.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="/foodcrops">Food Crops</a></li>
+            <li><a href="/cashcrops">Cash Crops</a></li>
+            <li><a href="/hoticrops">Horticulture Crops</a></li>
+            <li><a href="/plantcrops">Plantation Crops</a></li>
+           
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/">Home</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 agriarchive
+       
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/login"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/login"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <img src="../../assets/img/agg.jpg" width="40" height="50" alt="" loading="lazy">
+    <a class="navbar-brand" style="color:white; font-weight: bold;font-size: x-large; margin-left: 0.1cm;" href="#">AgriArchive</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="btn btn-outline-success" routerLink="/">HOME <span class="sr-only">(current)</span></a>
+        </li>
+         <li class="nav-item">
+          <a class="btn btn-outline-success" style="margin-left: 0.1cm;" routerLinkActive="active" routerLink="/crops">CROPS</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-success" style="margin-left: 0.1cm;" routerLinkActive="active"routerLink="/shop">SHOP</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-success"style="margin-left: 0.1cm;" routerLinkActive="active" *ngIf="authService.identifyUserRole()" routerLink="/addfoodcrops">ADD CROPS</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-success"style="margin-left: 0.1cm;"  routerLinkActive="active" *ngIf="authService.identifyUserRole()" routerLink="/editcrops">UPDATE/DELETE CROPS</a>
+        </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-outline-success" *ngIf="!authService.loggedIn()" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+        <a class="btn btn-outline-success" *ngIf="!authService.loggedIn()"style="margin-left: 0.5cm;" routerLink="/login" routerLinkActive="active">Login</a>
+        <a  class="btn btn-outline-success" *ngIf="authService.loggedIn()" style="color:rgb(255, 242, 240)"routerLinkActive="active" (click)="authService.logoutUser()">Logout</a>
+
+      </form>
+    
+    </div>
+  </nav>
+  

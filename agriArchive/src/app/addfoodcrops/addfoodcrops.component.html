@@ -1,0 +1,130 @@
+<div class="container"> 
+<div class="card">
+    <form #userLogin="ngForm" (ngSubmit)="AddCrops()">
+       
+        <div class="card-body">
+            <div class="table-responsive">
+            
+                <table class="table">
+                 
+                    <tbody>
+                        <tr>
+                         
+                            <td> <label>Portrayal (Image Url)</label></td>
+                            <td><input type="text" name="p_id" id="pdt" [(ngModel)]="newItem.Portrayal" required /></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Crop</label></td>
+                            <td><input type="text" name="p_name"id="pdt" [(ngModel)]="newItem.Crop"required /></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Sowing Season</label></td>
+                            <td><input type="text" name="p_code"id="pdt" [(ngModel)]="newItem.SowingSeason"required /></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Harvesting Season</label></td>
+                            <td><input type="text" name="p_date" id="pdt"[(ngModel)]="newItem.HarvestingSeason"required /></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Cultivation Practice</label></td>
+                            <td><input type="text" name="p_desc"id="pdt" [(ngModel)]="newItem.CultivationPractice"required /></td>
+                        </tr>
+                      
+                        <tr>
+                            <td>
+                                <div class="custom-radio"style="margin-left: 0.5cm;">
+                                    <input class="form-check-input" type="radio" name="foodCrops" id="radioNormal" value="Food Crops">
+                                    <label class="form-check-label" for="radioNormal">Food Crops</label>
+                                    
+                            </div> 
+                        </td>
+                            <td>
+                                <div class="custom-radio">
+                                    <input class="form-check-input" type="radio" name="foodCrops" id="cashCrops" value="Cash Crops">
+                                    <label class="form-check-label" for="radioNormal">Cash Crops</label>
+                                    
+                            </div>
+                         </td>
+
+                            <td>
+                             <div class="custom-radio">
+                    <input class="form-check-input" type="radio" name="foodCrops" id="hoticulturecrops" value="Hoticulture Crops" >
+                                    <label class="form-check-label" for="radioNormal">Hoticulture Crops</label>
+                                </div>
+                             </td>
+                          
+
+                            <td>
+                                <div class="custom-radio">
+                                    <input class="form-check-input" type="radio" name="foodCrops" id="plantationCrops" value="Plantation Crops" >
+                                    <label class="form-check-label" for="radioNormal">Plantation Crops</label>
+                                    
+                            </div> </td>
+                            
+                        </tr>
+                      
+                        <tr> 
+
+                            <td></td>
+                            <td><input type="submit" [disabled]="userLogin.form.invalid" class="btn btn-success" style="margin-left: 5cm;" value="Submit" /></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+<!--  footer -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify"> The <i>AgriArchive</i> aims in digitizing the agricultural sector, for enabling the next generation with the innovative farming techniques and solution for the challenges faced by them. </p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="/foodcrops">Food Crops</a></li>
+            <li><a href="/cashcrops">Cash Crops</a></li>
+            <li><a href="/hoticrops">Horticulture Crops</a></li>
+            <li><a href="/plantcrops">Plantation Crops</a></li>
+           
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/">Home</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 agriarchive
+       
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/login"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/login"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
